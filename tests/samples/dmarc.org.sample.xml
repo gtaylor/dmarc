@@ -36,10 +36,12 @@
         <domain>example.com</domain>
         <result>fail</result>
         <human_result></human_result>
+        <selector>test</selector>
       </dkim>
       <spf>
         <domain>example.com</domain>
         <result>pass</result>
+        <scope>mfrom</scope>
       </spf>
     </auth_results>
   </record>

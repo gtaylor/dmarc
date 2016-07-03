@@ -77,12 +77,14 @@ type DKIM struct {
 	Domain      string `xml:"domain"`
 	Result      string `xml:"result"`
 	HumanResult string `xml:"human_result"`
+	Selector	string `xml:"selector"`
 }
 
 // feedback/record/row/auth_results/dkim
 type SPF struct {
 	Domain string `xml:"domain"`
 	Result string `xml:"result"`
+	Scope  string `xml:"scope"`
 }
 
 // Custom type for parsing the timestamped date ranges.

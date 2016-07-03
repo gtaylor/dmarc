@@ -51,7 +51,9 @@ func TestDmarcOrgSample(t *testing.T) {
 	assert.Equal(t, rec.AuthResults.DKIM.Domain, "example.com")
 	assert.Equal(t, rec.AuthResults.DKIM.Result, "fail")
 	assert.Equal(t, rec.AuthResults.DKIM.HumanResult, "")
+	assert.Equal(t, rec.AuthResults.DKIM.Selector, "test")
 
 	assert.Equal(t, rec.AuthResults.SPF.Domain, "example.com")
 	assert.Equal(t, rec.AuthResults.SPF.Result, "pass")
+	assert.Equal(t, rec.AuthResults.SPF.Scope, "mfrom")
 }
